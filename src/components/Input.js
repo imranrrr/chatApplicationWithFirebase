@@ -62,7 +62,7 @@ function Input() {
     <div className="input">
       <input
         type="text"
-        placeholder="Type somehing..."
+        // placeholder="Type somehing..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
