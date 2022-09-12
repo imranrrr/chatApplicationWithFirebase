@@ -21,7 +21,7 @@ function Input() {
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
-            await updateDoc(doc(db, "chats", data.chatId),{
+            await updateDoc(doc(db, "chat", data.chatId),{
               messages: arrayUnion({
                 id:uuid(),
                 text,
@@ -64,6 +64,7 @@ function Input() {
       <input
         type="text"
         placeholder="Type somehing..."
+        value={text}
         onChange={(e) => setText(e.target.value)}
       />
       <div className="send">
