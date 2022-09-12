@@ -8,13 +8,13 @@
 .container {
   border: 1px solid white;
   border-radius: 10px;
-  width: 65%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   display: flex;
   overflow: hidden;
 }
 .sidebar {
-  flex: 1;
+  flex: 0.6;
   border: 1px solid #3e3c61;
   background-color: #3e3c61;
 }
@@ -86,7 +86,7 @@
 
 .userChatinfo > span {
   position: relative;
-  top: 10px;
+  top: 7px;
   font-size: 14px;
   font-weight: 500;
 }
@@ -115,9 +115,10 @@
   overflow: scroll;
 }
 .input {
-  height: 50px;
+  height: 40px;
+  margin-top: 7px;
   background-color: white;
-  padding: 10px;
+  padding: 11px;
   display: flex;
   align-items: center;
   justify-content: space-between;

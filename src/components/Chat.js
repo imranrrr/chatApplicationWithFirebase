@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Pages/Home.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import PersonIcon from "@mui/icons-material/Person";
 import LinearScaleIcon from "@mui/icons-material/LinearScale";
 import Messages from "./Messages";
-import Input from "./Input"
+import Input from "./Input";
+import { ChatContext } from "../Context/ChatContext";
 function Chat() {
+  const {data} = useContext(ChatContext)
   return (
     <div className="chat">
       <div className="chatinfo">
-        <span>Jane</span>
+        <span>{data.user?.displayName}</span>
         <div className="chaticons">
           <VideocamIcon className="VideocamIcon" fontSize="small" />
-          <PersonIcon className="PersonIcon" fontSize= "small" />
+          <PersonIcon className="PersonIcon" fontSize="small" />
           <LinearScaleIcon className="LinearScaleIcon" fontSize="small" />
         </div>
       </div>
-      <Messages/>
-      <Input/>
+      <Messages />
+      <Input />
     </div>
   );
 }

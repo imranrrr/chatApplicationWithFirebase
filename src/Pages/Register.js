@@ -4,9 +4,9 @@ import { auth, db, storage } from "../Firebase/index";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import "./Register.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 function Register() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [err, setErr] = useState(false);
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -39,8 +39,8 @@ function Register() {
               email,
               photoURL: downloadURL,
             });
-            await setDoc(doc(db,"userChat", res.user.uid), {});
-            navigate("/")
+            await setDoc(doc(db, "userChat", res.user.uid), {});
+            navigate("/");
           });
         }
       );
@@ -76,7 +76,9 @@ function Register() {
           <button>Sign up</button>
           {err && <span>Something went Wrong</span>}
         </form>
-        <p>You do have an account? Login</p>
+        <p>
+          You do have an account?<Link to="/login"> Login</Link>
+        </p>
       </div>
     </div>
   );
