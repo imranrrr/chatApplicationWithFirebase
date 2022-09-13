@@ -68,7 +68,7 @@ function Input() {
         onChange={(e) => setText(e.target.value)}
       />
       <div className="send">
-        <input type="file"  id="file"    onChange={(e) => setImg(e.target.files[0])} />
+        {/* <input type="file"  id="file"    onChange={(e) => setImg(e.target.files[0])} /> */}
         <button onClick={handlesend}>Send</button>
       </div>
     </div>

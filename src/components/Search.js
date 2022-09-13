@@ -44,7 +44,7 @@ function Search() {
     try {
       const res = await getDoc(doc(db, "chats", combinedId));
       if (!res.exists()) {
-        await setDoc(doc(db, "chats", combinedId), { messages: [] });
+        await setDoc(doc(db, "chats", combinedId), { message: [] });
         //create user chat
         await updateDoc(doc(db, "userChat", currentUser.uid), {
           [combinedId + ".userInfo"]: {

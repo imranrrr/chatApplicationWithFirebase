@@ -10,7 +10,7 @@ function Message({ message }) {
   return (
     <div
       className={`message ${message.SenderId === currentUser.uid && "owner"} `}
-    >
+    > 
       <div className="messageinfo">
         <img
           src={

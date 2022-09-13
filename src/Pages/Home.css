@@ -32,8 +32,10 @@
 }
 .logo {
   font-weight: bold;
+  font-size: 21px;
 }
 .user {
+  margin-top: 5px;
   display: flex;
   gap: 10px;
 }
