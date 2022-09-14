@@ -21,7 +21,7 @@ function Register() {
         res = Response;
       });
       const storageRef = ref(storage, displayName);
-      const uploadTask = uploadBytesResumable(storageRef, file);
+      const uploadTask = uploadBytesResumable(storageRef, file)
       //Register three observer
       uploadTask.on(
         (error) => {
@@ -43,7 +43,7 @@ function Register() {
             navigate("/");
           });
         }
-      );
+      )
     } catch (err) {
       setErr(true);
     }
