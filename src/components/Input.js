@@ -72,7 +72,7 @@ function Input() {
       <AttachFileIcon className="AttachFileIcon" />
       <input
         type="text"
-        placeholder="Type somehing..."
+        placeholder="Type something..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />

@@ -9,10 +9,9 @@ function Message({ message }) {
   console.log(message);
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
-  
 
- let milliseconds =  (message.date.seconds+(message.date.nanoseconds)*0.00000001)*1000;
-
+  let milliseconds =
+    (message.date.seconds + message.date.nanoseconds * 0.00000001) * 1000;
 
   return (
     <div
@@ -28,10 +27,8 @@ function Message({ message }) {
           alt=""
         />
         <div>
-
-          <span  className="span" >{moment(milliseconds).format('h:mm a')}</span>
+          <span className="span">{moment(milliseconds).format("h:mm a")}</span>
         </div>
-
       </div>
       <div className="messageContent">
         <p>{message.text}</p>
