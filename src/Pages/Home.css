@@ -149,6 +149,7 @@
 .messages {
   background-color: #efeae2;
   padding: 10px;
+  overflow-y: scroll;
   height: calc(100% - 160px);
   /* overflow: scroll; */
 }
@@ -243,4 +244,8 @@
   color: #464647;
   position: relative;
   left: 7px;
+}
+.span{
+  font-size: 13px;
+  font-weight: normal;
 }
