@@ -11,7 +11,10 @@ function Chat() {
   return (
     <div className="chat">
       <div className="chatinfo">
+        <div className="chatimg" >
+      <img src={data.user?.photoURL} alt="" />
         <span>{data.user?.displayName}</span>
+        </div>
         <div className="chaticons">
           <VideocamIcon className="VideocamIcon" fontSize="small" />
           <PersonIcon className="PersonIcon" fontSize="small" />

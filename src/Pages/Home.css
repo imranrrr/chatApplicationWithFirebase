@@ -1,5 +1,5 @@
 .home {
-  background-color: #a7bcff;
+  background-color: #efeae2;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -15,8 +15,8 @@
 }
 .sidebar {
   flex: 0.6;
-  border: 1px solid #3e3c61;
-  background-color: #3e3c61;
+  border: 1px solid #e9edef;
+  background-color: #ffffff;
 }
 .chat {
   flex: 2;
@@ -24,9 +24,10 @@
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #2f2d52;
-  height: 50px;
+  background-color: #f0f2f5;
+  height: 49px;
   padding: 10px;
+  border-right: 1px solid #d1d7db;
   justify-content: space-between;
   color: #ddddf7;
 }
@@ -39,22 +40,37 @@
   display: flex;
   gap: 10px;
 }
+.user > span {
+  margin-top: 13px;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  right: 7px;
+}
 .user > img {
   background-color: #ddddf7;
-  height: 24px;
-  width: 24px;
+  position: relative;
+  right: 3px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
 .user > button {
-  background-color: #5d5b8d;
+  background-color: black;
+  height: 30px;
+  border-radius: 6px;
+  margin-top: 10px;
+  width: 60px;
+  margin-left: 49px;
   color: #ddddf7;
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: bold;
   border: none;
   cursor: pointer;
 }
 .search {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #e9edef;
 }
 .searchform {
   padding: 10px;
@@ -62,48 +78,68 @@
 .searchform > input {
   background-color: transparent;
   border: none;
-  color: white;
+  color: black;
+  font-size: 12px;
   outline: none;
 }
 .searchform > ::placeholder {
-  color: lightgray;
+  color: black;
 }
 .userchat {
   padding: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: black;
   cursor: pointer;
+  height: 50px;
+  border-bottom: 1px solid #e9edef;
+  line-height: 10px;
 }
 .userchat > img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
 .userchat:hover {
-  background-color: #2f2d52;
+  background-color: #f0f2f5;
 }
 
 .userChatinfo > span {
   position: relative;
-  top: 7px;
-  font-size: 14px;
+  font-size: 13px;
+  color: black;
   font-weight: 500;
 }
 .userChatinfo > p {
-  font-size: 12px;
-  color: lightgray;
+  position: relative;
+  top: 6px;
+  font-size: 13px;
+  color: black;
 }
 .chatinfo {
   height: 50px;
-  background-color: #5d5b8d;
+  background-color: #f0f2f5;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  color: lightgray;
+  font-size: 17px;
+  font-weight: bold;
+}
+.chatimg > span {
+  position: relative;
+  bottom: 14px;
+  left: 10px;
+}
+.chatimg > img {
+  margin-top: 7px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
 }
 .chaticons {
   display: flex;
@@ -111,15 +147,15 @@
   cursor: pointer;
 }
 .messages {
-  background-color: #ddddf7;
+  background-color: #efeae2;
   padding: 10px;
   height: calc(100% - 160px);
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 .input {
   height: 40px;
   margin-top: 7px;
-  background-color: white;
+  background-color: #f0f2f5;
   padding: 11px;
   display: flex;
   align-items: center;
@@ -129,11 +165,18 @@
   width: 100%;
   border: none;
   outline: none;
+  background-color: #ffffff;
+  height: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  left: 6px;
+  margin-left: 10px;
   color: #2f2d52;
   font-size: 18px;
 }
 .input::placeholder {
-  color: lightgray;
+  color: #464647;
 }
 .send {
   display: flex;
@@ -145,15 +188,15 @@
 }
 .send > button {
   border: none;
-  padding: 10px 15px;
-  color: white;
-  background-color: #8da4f1;
+  position: relative;
+  left: 10px;
+  color: #464647;
   cursor: pointer;
   border-radius: 5px;
 }
 .message {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 .owner {
@@ -167,8 +210,7 @@
 .messageinfo {
   display: flex;
   flex-direction: column;
-  color: gray;
-  font-weight: 300;
+  font-weight: bolder;
 }
 .messageinfo > img {
   width: 40px;
@@ -186,11 +228,19 @@
   width: 50%;
 }
 .messgaecontent > p {
-  background-color: white;
+  background-color: black;
   padding: 10px 20px;
   border-radius: 0px 10px 10px 10px;
   max-width: max-content;
 }
 .messgaecontent {
   align-items: flex-end;
+}
+.SentimentVerySatisfiedIcon {
+  color: #464647;
+}
+.AttachFileIcon {
+  color: #464647;
+  position: relative;
+  left: 7px;
 }
